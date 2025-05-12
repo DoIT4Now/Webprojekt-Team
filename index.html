@@ -1,51 +1,110 @@
 <!DOCTYPE html>
 <html lang="de">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>TeamWebseite - Startseite</title>
+  <title>Team-Webseite</title>
   <link rel="stylesheet" href="css/style.css" />
+  <script defer src="js/darkmode.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 </head>
-<body>
-  <header class="header">
-    <div class= "Logo"
-  >
-      <!-- Ersetze das folgende <img> durch dein tatsächliches Logo -->
-      <img src="Bilder/Logo_4.png" alt="Logo" width="200" height="200"/>
-    </div>
-    <nav class="navigation">
-      <ul>
-        <li><a href="#" id="homebutton">Start</a></li>
-<!--
-        <li><a href="index.html">Start</a></li> 
-        -->
 
-        <li><a href="html/team.html">Team</a></li>
-        <li><a href="html/kontakt.html">Kontakt</a></li>
-        <li><button id="darkmode-toggle">🌙</button></li>
-      </ul>
-    </nav>
+<body>
+  <!-- Hintergrund-Animation -->
+  <div class="background-animation">
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+  </div>
+
+  <!-- Darkmode-Button -->
+  <button class="darkmode-toggle" id="darkmode-toggle">Lightmode</button>
+
+  <!-- Header -->
+  <header>
+    <div class="logo">
+      <img id="logo" src="Bilder/Logo_Darkmode.png" alt="Logo" width="100" height="100" />
+    </div>
+    <div class="slogan">
+      <p>Doppelt Smart. Doppelt Stark.</p>
+    </div>
   </header>
 
-  <main>
-    <section>
-      <h2>Unser Projekt</h2>
-      <p>Dies ist unsere gemeinsame Teamseite. Wir lernen, wie man Webseiten erstellt und mit Git im Team arbeitet!</p>
-    </section>
-    <section>
-      <h2>Features</h2>
-      <ul>
-        <li>Teamübersicht</li>
-        <li>Kontaktformular</li>
-        <li>Darkmode (optional)</li>
-      </ul>
-    </section>
-  </main>
+  <!-- Navigation -->
+  <nav>
+    <ul>
+      <li><a href="#team">Team</a></li>
+      <li><a href="#projects">Projekte</a></li>
+      <li><a href="#contact">Kontakt</a></li>
+    </ul>
+  </nav>
 
-  <footer>
-    <p>&copy; 2025 Unser Teamprojekt</p>
-  </footer>
+  <!-- Team -->
+  <section id="team">
+    <h2>UNSER TEAM</h2>
+    <div class="team-members">
+      <div class="team-member">
+        <img src="Bilder/aw2.jpg" alt="Anwendungsentwickler 1" />
+        <h3>DORO</h3>
+        <p>Anwendungsentwickler</p>
+      </div>
+      <div class="team-member">
+        <img src="Bilder/aw1.jpg" alt="Anwendungsentwickler 2" />
+        <h3>DORI</h3>
+        <p>Anwendungsentwicklerin</p>
+      </div>
+    </div>
+  </section>
 
-  <script src="js/darkmode.js"></script>
+  <!-- Projekte -->
+  <section id="projects">
+    <h2>Unsere Projekte</h2>
+    <div class="projects">
+      <div class="project">
+        <img src="project1.jpg" alt="Projekt 1" />
+        <h3>Portfolio</h3>
+        <p>Beschreibung des Projekts 1.</p>
+        <a href="https://example.com/projekt1" target="_blank">Zum Projekt</a>
+      </div>
+      <div class="project">
+        <img src="project2.jpg" alt="Projekt 2" />
+        <h3>Portfolio</h3>
+        <p>Beschreibung des Projekts 2.</p>
+        <a href="https://doit4now.github.io/Portfolio_Webseite/" target="_blank">Zum Projekt</a>
+      </div>
+      <div class="project">
+        <img src="project3.jpg" alt="Projekt 3" />
+        <h3>Smart Health</h3>
+        <p>Beschreibung des Projekts 3.</p>
+        <a href="https://example.com/projekt3" target="_blank">Zum Projekt</a>
+      </div>
+      <div class="project">
+        <img src="project4.jpg" alt="Projekt 4" />
+        <h3>Smart Home</h3>
+        <p>Beschreibung des Projekts 4.</p>
+        <a href="https://example.com/projekt4" target="_blank">Zum Projekt</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Kontakt -->
+  <section id="contact">
+    <h2>Kontakt</h2>
+    <form class="contact-form">
+      <input type="text" placeholder="Ihr Name" required />
+      <input type="email" placeholder="Ihre E-Mail" required />
+      <textarea placeholder="Ihre Nachricht" required></textarea>
+      <button type="submit">Absenden</button>
+    </form>
+    <div class="social-links">
+      <a href="https://linkedin.com/in/deinprofil" target="_blank" aria-label="LinkedIn">
+        <i class="fab fa-linkedin"></i>
+      </a>
+    </div>
+  </section>
 </body>
+
 </html>

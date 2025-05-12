@@ -1,21 +1,31 @@
-document.addEventListener("DOMContentLoaded", () => {
-    const toggleButton = document.getElementById("darkmode-toggle");
-  
-    // Prüfen, ob ein Modus gespeichert ist
-    const darkModeSetting = localStorage.getItem("dark-mode");
-    const prefersDark = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
-  
-    if (darkModeSetting === "true" || (darkModeSetting === null && prefersDark)) {
-      document.body.classList.add("dark-mode");
-    }
-  
-    // Button-Klick: Modus umschalten
-    toggleButton.addEventListener("click", () => {
-      document.body.classList.toggle("dark-mode");
-  
-      // Modus speichern
-      const isDark = document.body.classList.contains("dark-mode");
-      localStorage.setItem("dark-mode", isDark);
-    });
+document.addEventListener("DOMContentLoaded", function () {
+  const toggleButton = document.getElementById("darkmode-toggle");
+  const logo = document.getElementById("logo");
+
+  if (localStorage.getItem("mode") === "light") {
+    document.body.classList.add("light-mode");
+    toggleButton.textcontent = "Darkmode"
+  }
+  toggleButton.addEventListener("click", () => {
+    document.body.classList.toggle("light-mode");
+
+    const islight = document.body.classList
+      .contains("light-mode");
+    toggleButton.textContent = islight ? "Darkmode" : "Lightmode";
+    localStorage.setItem("mode", islight ? "light" : "dark");
+    logo.src = islight ? "Bilder/Logo_4.png" : "Bilder/Logo_Darkmode.png";
+
   });
-  
+
+
+
+  // Klickbarer Schriftzug (Beispiel: Impressum)
+  const impressumLink = document.getElementById("impressum-link");
+
+  if (impressumLink) {
+    impressumLink.addEventListener("click", () => {
+      alert("Hier könnte das Impressum angezeigt oder eine Seite geöffnet werden.");
+      // Alternativ: window.location.href = 'impressum.html';
+    });
+  }
+});
