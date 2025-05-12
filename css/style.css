@@ -16,12 +16,12 @@
   /* Header + Navigation */
   header {
     background-color: #007acc;
-    color: white;
+    color: rgb(243, 235, 235);
     padding: 1rem 2rem;
   }
   
   header h1 {
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.2rem;
   }
   
   nav ul {
@@ -52,6 +52,19 @@
     background-color: rgba(255, 255, 255, 0.2);
     border-radius: 5px;
   }
+  /* Homebutton*/
+  #homeButton {
+    float: left; /* Homebutton Logo links */
+    padding: 30px 03px;
+    margin:  -15px 10px;
+    background-image: url("logo-klein.png"); /* Ersetze mit deinem Bildpfad */
+    background-size: 10px 10px;
+    background-position: center;
+    background-repeat: no-repeat;
+    text-decoration: none;
+}
+#homeButton:hover {
+    background-color: rgba(215, 230, 173, 0.219);
   
   /* Hauptbereich */
   main {
@@ -148,4 +161,27 @@
       padding: 1rem;
     }
   }
-  
+  .header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background-color: #f0f0f0; /* oder deine Wunschfarbe */
+}
+
+.logo img {
+  height: 30px; /* Größe anpassen je nach Logo */
+}
+
+.navigation ul {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+}
+
+.navigation a {
+  text-decoration: none;
+  color: #333;
+}
